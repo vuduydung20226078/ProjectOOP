@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM Systems</title>
+    <link rel="stylesheet" href="introIMS.css"> 
+</head>
+<body id="body">
+    
+    <div class="l-navbar show" id ="navbar">
+       <div class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <ion-icon name="logo-octocat" class="nav_logo-icon"></ion-icon>
+                    <span class="nav_logo-text">IM Systems</span>
+                </a>
+                <div class="nav_toggle" id="nav_toggle">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </div>
+                <ul class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <ion-icon name="grid" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="file-tray-stacked" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Product Management</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="cloud-download" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Inventory Out</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="cloud-upload"class="nav_icon"></ion-icon>
+                        <span class="nav_text">Inventory In</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="cart" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Order Management</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="create" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Report & Analytics</span>
+                    </a>  
+                </ul>
+            </div>
+            <div>
+                <a href="#" class="nav_link" id="logout">
+                        <ion-icon name="log-out" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Logout</span>
+                </a>
+            </div>
+       </div> 
+    </div>
+    <div class="menu-profile">
+        <div class="menu-profile-icon">
+            <ion-icon name="notifications" class="noti-icon"></ion-icon>
+            <img src="/Assets/user0.png" class="user-pic" id="userpic">
+        </div>
+        <div class="drop-menu-profile" id="drop-menu-profile">
+                    <a href="#"> <img src="/Assets/user0.png" class="user-pic-in">Username0 </a>
+                    <a href="#">
+                        <ion-icon name="person"></ion-icon> Profile
+                    </a>
+                    <a href="#">
+                        <ion-icon name="settings"></ion-icon> Settings
+                    </a>
+                    <a href="#">
+                        <ion-icon name="help-circle"></ion-icon> Help & Support
+                    </a>
+                    <a href="#">
+                        <ion-icon name="swap-horizontal"></ion-icon> Convert Account
+                    </a>
+        </div>
+    </div>
+    <div class="menu-listInfo">
+        
+        <ion-icon name="menu" id="menu-listInfo-icon"></ion-icon>
+        <div class="dropdown-menu-listInfo" id="dropdown-menu-listInfo">
+                    <a href="#" class="nav-link-showInfo" onclick="showListInfo('inventory-list')">
+                        <span>Danh Sách Sản Phẩm Trong Kho</span>
+                    </a>
+                    <a href="#" class="nav-link-showInfo" onclick="showListInfo('supplier-list')">
+                        <span>Danh Sách Nhà Cung Cấp</span>
+                    </a>
+                    <a href="#" class="nav-link-showInfo" onclick="showListInfo('customer-list')">
+                        <span>Danh Sách Khách Hàng</span>
+                    </a>
+                    <a href="#" class="nav-link-showInfo" onclick="showListInfo('import-list')">
+                        <span>Danh Sách Phiếu Nhập Kho Đã Xuất</span>
+                    </a>
+                    <a href="#" class="nav-link-showInfo" onclick="showListInfo('export-list')">
+                        <span>Danh Sách Phiếu Xuất Kho Đã Xuất</span>
+                    </a>   
+        </div>
+    </div>
+    <div id="inventory-list">
+        <form action="" id="search-box">
+            <input type="text" id="search-text" placeholder="What do you want to search?" required>
+            <button id="search-button"><ion-icon name="search" id="search-icon"></ion-icon></button>
+        </form>
+        <h2>Danh Sách Sản Phẩm Trong Kho</h2>
+        <button id="view-all-btn">View All</button>
+        <div class="inventory-container">
+            <div class="inventory-item">
+                <img src="/Assets/user0.png" class="pic-product">
+                <h3>ID Product: SP001</h3>
+                <p>Name: Sản phẩm A</p>
+                <p>Quantity: 150</p>
+                <p>Price: 120,000 VND</p>
+                <p>Location: Kệ A1</p>
+            </div>
+            
+        </div>
+    </div>
+    <div id="supplier-list">
+        <h2>Danh Sách Nhà Cung Cấp</h2>
+        <button id = view-all-btn>View All</button>
+        <div class="supplier-container">
+            <div class="supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+            <div class = "supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+            <div class = "supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+            <div class = "supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+            <div class = "supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+            <div class = "supplier-infor">
+                <h3>ID Supplier: 12345</h3>
+                <p>Name: Supplier A</p>
+                <p>Contact Number: 012345678</p>
+                <p>Address: MNP-ABC-Hà Nội</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="introIMS.js"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
